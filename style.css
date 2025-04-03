@@ -1,11 +1,12 @@
 :root {
-    --thema-accent: #7a4;
-    --thema-main: #a7d7c5;
+    --thema-accent: #53D162;
+    --thema-main: #A6D8AA;
 }
 
 body {
     margin: 0;
     font-family: "Hiragino Maru Gothic Pro", "Hiragino Kaku Gothic Pro", "HGMaruGothicMPRO", Meiryo, Osaka, "MS PGothic", sans-serif;
+    color: #222;
 }
 
 .me {
@@ -33,16 +34,28 @@ button{
     border-radius: 90px;
 }
 
+.miscinputer label input {
+    width: 100%;
+}
+
+.miscinputer label input::file-selector-button {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: #333 1px solid;
+    border-radius: 20px;
+}
+
+.miscinputer label input::file-selector-button:active {
+    background: #000;
+}
+
 .other_set {
     background: var(--thema-main);
     box-shadow: 0 1px 7px black;
     margin: 20px 10px;
     padding: 20px;
     border-radius: 15px;
-}
-
-.miscinputer label input::file-selector-button {
-    display: block;
 }
 
 .box {
@@ -135,24 +148,28 @@ button{
 }
 
 .memu_title {
-    padding: 10px;
-    height: 50px;
+    height: max-content;
     position: sticky;
+    display: flex;
+    align-items: center;
     top: 0;
     background: #aaa;
     border-top: solid 3px var(--thema-accent);
     backdrop-filter: blur(4px);
 }
 
+.memu_title h2{
+    margin: 15px 10px;
+}
+
 .memu_title h2::before {
-    content: url('./music-note-beamed.svg');
+    content: url('./img/music-note-beamed.svg');
     padding-right: 5px;
     display: inline;
 }
 
 .memu_title .mebtn {
-    margin-right: 10px;
-    top: 10px;
+    margin-left: auto;
 }
 
 @media screen and (max-width:480px) {
@@ -180,9 +197,6 @@ button{
 }
 
 .mebtn {
-    position: absolute;
-    right: 10px;
-    top: -15px;
     margin-right: 20px;
     background: var(--thema-main);
     border: 2px solid #333;
@@ -190,6 +204,12 @@ button{
     width: 50px;
     aspect-ratio: 1/1;
     box-shadow: 0 1px 10px black;
+}
+
+.mebtn_open{
+    position: absolute;
+    right: 10px;
+    top: -15px;
 }
 
 .mebtn p {

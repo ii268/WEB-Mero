@@ -1,18 +1,20 @@
+//メモ: Audioイベント一覧 https://developer.mozilla.org/ja/docs/Web/API/HTMLMediaElement
 var hasya_melody = "", tojime = "";
 
 //ファイル読み込み
-hasya_melody_file.addEventListener("change", function () {
+hasya_file.addEventListener("change", function () {
     const reader = new FileReader();
     reader.addEventListener("load", function (e) {//ファイル読み込み後のイベント定義
         filecode = e.currentTarget.result;
         hasya_melody = new Audio(filecode);
-        console.log(filecode);
 
-        on.addEventListener("click", () => {
-            melody_on();
-        });
-        off.addEventListener("click", () => {
-            melody_off();
+        hasya_melody.addEventListener("canplay", () => {
+            on.addEventListener("click", () => {
+                melody_on();
+            });
+            off.addEventListener("click", () => {
+                melody_off();
+            });
         });
 
         hasya_melody.addEventListener("play", (e) => {
@@ -30,10 +32,11 @@ hasya_melody_file.addEventListener("change", function () {
         });
 
     });
-    if (hasya_melody_file.files[0] === undefined) {
+
+    if (hasya_file.files[0] === undefined) {
         hasya_melody = "";
     } else {
-        reader.readAsDataURL(hasya_melody_file.files[0]);//ファイルを読み込んでDataURLを生成
+        reader.readAsDataURL(hasya_file.files[0]);//ファイルを読み込んでDataURLを生成
     }
 });
 
@@ -42,7 +45,6 @@ tojime_file.addEventListener("change", function () {
     reader2.addEventListener("load", function (e) {
         filecode2 = e.currentTarget.result;
         tojime = new Audio(filecode2);
-        console.log(filecode2);
 
         tojime.addEventListener("error", (e) => {
             console.log('err');
@@ -53,6 +55,7 @@ tojime_file.addEventListener("change", function () {
     reader2.addEventListener("error", () => {
         alert('エラーが発生しました');
     });
+
     console.log(tojime_file.files[0]);
     if (tojime_file.files[0] === undefined) {
         tojime = "";
@@ -65,7 +68,7 @@ tojime_file.addEventListener("change", function () {
 function melody_on() {
     //window.navigator.vibrate([50]);
     if (hasya_melody == "") {
-        alert("音声ファイルを選択してください");
+        console.log("選択されていません");
     } else {
         hasya_melody.play();
         hasya_melody.loop = true;
@@ -93,10 +96,10 @@ function melody_off() {
 function speak() {
     if (tojispeak.checked) {
         let ssh = window.speechSynthesis;
-        ssh.cancel();    
+        ssh.cancel();
         let ssu = new SpeechSynthesisUtterance(tospnai.value);
         ssh.speak(ssu);
-    }    
+    }
 }
 
 //キーイベント
@@ -115,7 +118,7 @@ tojispeak.addEventListener("change", function () {
         } else {
             tospnai.setAttribute("disabled", true);
         }
-    }else{
+    } else {
         alert('このブラウザは音声合成に対応していません');
         tojispeak.setAttribute("disabled", true);
     }
