@@ -14,3 +14,10 @@ Departure melody player / 発車メロディー用プレイヤー
 6. メロディーを止めるにはOFFを押してください。また「戸閉放送ファイル」を選択している場合は戸閉放送が再生されます
 
 このプログラムはまだ発展途上です
+
+## 私的メモ
+
+### tailwindのビルドコマンド
+```
+npx @tailwindcss/cli -i input.css -o ./docs/main.css
+```

@@ -20,7 +20,6 @@ hasya_file.addEventListener("change", function () {
         hasya_melody.addEventListener("play", (e) => {
             console.log('開始');
             console.log(e);
-            jyoutai.innerHTML = '<span style="color: green;">再生中</span>';
             on.style.boxShadow = "none";
             on.style.transform = "translateY(5px)";
         });
@@ -28,7 +27,6 @@ hasya_file.addEventListener("change", function () {
         hasya_melody.addEventListener("pause", (e) => {
             console.log('停止');
             console.log(e);
-            jyoutai.innerHTML = '<span style="color: red;">停止中</span>';
         });
 
     });

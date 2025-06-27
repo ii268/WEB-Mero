@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="お手軽発車ベルはWEB上で発車メロディーのシステムを再現できるサイトです。アカウント不要で楽しめます">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="hassyabtn.css">
+    <title>お手軽発車ベル</title>
+</head>
+<body>
+    <header>
+        <h1 class="fixed left-3 top-3 text-xl font-bold">お手軽発車ベル</h1>
+        <div class="fixed right-3 top-3"><button id="infodia_o"><img src="./img/info.svg" alt="info"
+                    width="30"></button></div>
+    </header>
+
+    <dialog id="infodia" class="m-auto p-5 w-90 rounded-md backdrop:backdrop-blur-md backdrop:backdrop-brightness-70">
+        <button id="infodia_c" class="absolute right-3 top-3"><img src="./img/x-circle.svg" alt="close" width="30"></button>
+        <div class="">
+            <h1 class="text-xl font-bold">お手軽発車ベル</h1>
+            <p>説明</p>
+        </div>
+    </dialog>
+
+    <div class="flex justify-center items-center mt-10 h-full lg:h-screen lg:mt-0">
+        <div>
+            <button class="block mx-auto my-5 p-2 bg-green-400 rounded-md active:bg-green-500"
+                id="upconfig_oc">設定画面開閉</button>
+            <div class="flex flex-col lg:flex-row justify-center items-center h-full">
+                <div id="bsw215b3" class="shadow-xl">
+                    <div class="label"></div>
+                    <div class="switchup">
+                        <button id="on" title="ここを押すと音が鳴ります" class="miscswitch">ON</button><br>
+                        <button id="off" title="ここを押すと音が止まります" class="miscswitch">OFF</button>
+                    </div>
+                </div>
+                <div class="mt-5 p-5 bg-gray-100 rounded-md border border-gray-300 shadow-md lg:ml-20" id="upconfig">
+                    <h2 class="text-lg font-bold">再生設定</h2>
+                    <label class="block m-5">
+                        <h3 class="font-medium">再生音楽ファイル</h3>
+                        <input class="block file:bg-green-400 file:p-2 file:rounded-md" type="file" id="hasya_file"
+                            accept="audio/mpeg,audio/wav,audio/ogg,audio/webm">
+                    </label>
+                    <label class="block m-5">
+                        <h3 class="font-medium">戸閉放送ファイル</h3>
+                        <input class="block file:bg-green-400 file:p-2 file:rounded-md" type="file" id="tojime_file"
+                            accept="audio/mpeg,audio/wav,audio/ogg,audio/webm">
+                    </label>
+                    <label class="block"><input type="checkbox" class="checked:bg-green-400" id="Tmode">立川式</label>
+                    <label class="block"><input type="checkbox" class="checked:bg-green-400"
+                            id="tojispeak">戸閉放送を音声合成で読み上げ(β)</label>
+                    <label>放送内容:<input
+                            class="block p-0.5 border border-black rounded-sm shadow-sm disabled:border-gray-400 disabled:bg-gray-100 disabled:text-gray-400"
+                            type="text" id="tospnai" disabled value="ドアがしまります。ご注意ください。"></label><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="me">
+        <p class="info"><a href="https://github.com/ii268/WEB-Mero/blob/main/README.md#使い方" target="_blank" rel="noopener">これの使い方</a></p>
+        <p id="jyoutai"><span style="color: red;">停止中</span></p>
+        <button class="mebtn mebtn_open"><img src="./img/music-note-beamed.svg" alt="音"><p>音設定</p></button>
+    </div> -->
+
+    <script src="script.js"></script>
+    <script src="melody.js"></script>
+    <style>
+        button {
+            cursor: pointer;
+        }
+    </style>
+</body>
+</html>

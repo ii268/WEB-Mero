@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme {
+    --font-serif: "Hiragino Maru Gothic Pro", "HGMaruGothicMPRO", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}

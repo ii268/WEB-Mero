@@ -1,0 +1,17 @@
+{
+  "name": "web-mero",
+  "version": "2.0.0",
+  "description": "Departure melody player / 発車メロディー用プレイヤー",
+  "main": "melody.js",
+  "scripts": {
+    "build:tailwind": "@tailwindcss/cli -i input.css -o main.css"
+  },
+  "author": "ibuibu268",
+  "license": "UNLICENSED",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.11",
+    "@tailwindcss/cli": "^4.1.11"
+  }
+}
