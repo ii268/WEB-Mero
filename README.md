@@ -7,9 +7,8 @@ Departure melody player / 発車メロディー用プレイヤー
 ## 使い方
 
 1. [WEB-Meroウェブサイト](https://ii268.github.io/WEB-Mero/)にアクセスする
-2. 🎵音設定を押す
-3. 「再生音楽ファイル」を選択する
-4. 必要に応じて「戸閉放送ファイル」を選択する
+3. 「再生音楽ファイル」をクリックまたはタップして発車メロディを選択する
+4. 「戸閉放送ファイル」をクリックまたはタップして戸閉放送を選択する
 5. ONボタンを押せばメロディーが再生されます
 6. メロディーを止めるにはOFFを押してください。また「戸閉放送ファイル」を選択している場合は戸閉放送が再生されます
 
@@ -19,5 +18,5 @@ Departure melody player / 発車メロディー用プレイヤー
 
 ### tailwindのビルドコマンド
 ```
-npx @tailwindcss/cli -i input.css -o ./docs/main.css
+npx @tailwindcss/cli -i tw_input.css -o ./docs/css/main.css
 ```

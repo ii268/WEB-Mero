@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="お手軽発車ベルはWEB上で発車メロディーのシステムを再現できるサイトです。アカウント不要で楽しめます">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="hassyabtn.css">
+    <meta name="description" content="お手軽発車ベルはWEB上で駅の発車ベルのシステムを再現できるサイトです。アカウント不要で楽しめます">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/hassyabtn.css">
     <title>お手軽発車ベル</title>
 </head>
 <body>
     <header>
         <h1 class="fixed left-3 top-3 text-xl font-bold">お手軽発車ベル</h1>
-        <div class="fixed right-3 top-3"><button id="infodia_o"><img src="./img/info.svg" alt="info"
-                    width="30"></button></div>
+        <div class="fixed right-3 top-3"><button id="infodia_o"><img src="./img/info.svg" alt="info" width="30"></button></div>
     </header>
 
     <dialog id="infodia" class="m-auto p-5 w-90 rounded-md backdrop:backdrop-blur-md backdrop:backdrop-brightness-70">
         <button id="infodia_c" class="absolute right-3 top-3"><img src="./img/x-circle.svg" alt="close" width="30"></button>
         <div class="">
             <h1 class="text-xl font-bold">お手軽発車ベル</h1>
-            <p>説明</p>
+            <p>駅の発車ベル・発車メロディを再現するサイト</p>
+            <div>
+                <a href="https://github.com/ii268/WEB-Mero/blob/main/README.md" target="_blank" class="inline-block p-2 rounded-md border border-gray-300">使い方</a>
+                <a href="https://github.com/ii268/WEB-Mero.git" target="_blank" class="inline-block p-2 rounded-md border border-gray-300">ソースコード</a>    
+            </div>
         </div>
     </dialog>
 
     <div class="flex justify-center items-center mt-10 h-full lg:h-screen lg:mt-0">
         <div>
-            <button class="block mx-auto my-5 p-2 bg-green-400 rounded-md active:bg-green-500"
-                id="upconfig_oc">設定画面開閉</button>
+            <button class="block mx-auto my-5 p-2 bg-green-400 rounded-md active:bg-green-500" id="upconfig_oc">設定画面開閉</button>
             <div class="flex flex-col lg:flex-row justify-center items-center h-full">
                 <div id="bsw215b3" class="shadow-xl">
                     <div class="label"></div>
@@ -64,8 +66,8 @@
         <button class="mebtn mebtn_open"><img src="./img/music-note-beamed.svg" alt="音"><p>音設定</p></button>
     </div> -->
 
-    <script src="script.js"></script>
-    <script src="melody.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/melody.js"></script>
     <style>
         button {
             cursor: pointer;

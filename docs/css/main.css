@@ -215,6 +215,9 @@
   .hidden {
     display: none;
   }
+  .inline-block {
+    display: inline-block;
+  }
   .h-full {
     height: 100%;
   }
