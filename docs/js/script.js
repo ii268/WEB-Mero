@@ -16,3 +16,15 @@ document.getElementById("infodia_o").addEventListener("click",()=>{
 document.getElementById("infodia_c").addEventListener("click",()=>{
     infodia.close();
 });
+tojispeak.addEventListener("change", function () {
+    if ('speechSynthesis' in window) {
+        if (tojispeak.checked) {
+            tospnai.removeAttribute("disabled");
+        } else {
+            tospnai.setAttribute("disabled", true);
+        }
+    } else {
+        alert('このブラウザは音声合成に対応していません');
+        tojispeak.setAttribute("disabled", true);
+    }
+});
