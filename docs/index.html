@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="お手軽発車ベルはWEB上で駅の発車ベルのシステムを再現できるサイトです。アカウント不要で楽しめます">
+    <meta name="description" content="お手軽発車ベルはWEB上で駅の発車ベルのシステムを再現できるサイトです。アカウント不要で楽しめます!">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/hassyabtn.css">
     <title>お手軽発車ベル</title>
@@ -29,7 +29,7 @@
     <div class="flex justify-center items-center mt-10 h-full lg:h-screen lg:mt-0">
         <div>
             <button class="block mx-auto my-5 p-2 bg-green-400 rounded-md active:bg-green-500" id="upconfig_oc">設定画面開閉</button>
-            <div class="flex flex-col lg:flex-row justify-center items-center h-full">
+            <div class="flex flex-col justify-center items-center h-full lg:flex-row">
                 <div id="bsw215b3" class="shadow-xl">
                     <div class="label"></div>
                     <div class="switchup">
@@ -41,30 +41,24 @@
                     <h2 class="text-lg font-bold">再生設定</h2>
                     <label class="block m-5">
                         <h3 class="font-medium">再生音楽ファイル</h3>
-                        <input class="block file:bg-green-400 file:p-2 file:rounded-md" type="file" id="hasya_file"
+                        <input class="block file:p-2 file:rounded-md file:bg-green-400" type="file" id="hasya_file"
                             accept="audio/mpeg,audio/wav,audio/ogg,audio/webm">
                     </label>
                     <label class="block m-5">
                         <h3 class="font-medium">戸閉放送ファイル</h3>
-                        <input class="block file:bg-green-400 file:p-2 file:rounded-md" type="file" id="tojime_file"
+                        <input class="block file:p-2 file:rounded-md file:bg-green-400" type="file" id="tojime_file"
                             accept="audio/mpeg,audio/wav,audio/ogg,audio/webm">
                     </label>
                     <label class="block"><input type="checkbox" class="checked:bg-green-400" id="Tmode">立川式</label>
                     <label class="block"><input type="checkbox" class="checked:bg-green-400"
                             id="tojispeak">戸閉放送を音声合成で読み上げ(β)</label>
                     <label>放送内容:<input
-                            class="block p-0.5 border border-black rounded-sm shadow-sm disabled:border-gray-400 disabled:bg-gray-100 disabled:text-gray-400"
+                            class="block p-0.5 border rounded-sm shadow-sm border-black disabled:border-gray-400 disabled:bg-gray-100 disabled:text-gray-400"
                             type="text" id="tospnai" disabled value="ドアがしまります。ご注意ください。"></label><br>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- <div class="me">
-        <p class="info"><a href="https://github.com/ii268/WEB-Mero/blob/main/README.md#使い方" target="_blank" rel="noopener">これの使い方</a></p>
-        <p id="jyoutai"><span style="color: red;">停止中</span></p>
-        <button class="mebtn mebtn_open"><img src="./img/music-note-beamed.svg" alt="音"><p>音設定</p></button>
-    </div> -->
 
     <script src="./js/script.js"></script>
     <script src="./js/melody.js"></script>
