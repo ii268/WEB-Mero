@@ -20,3 +20,8 @@ Departure melody player / 発車メロディー用プレイヤー
 ```
 npx @tailwindcss/cli -i tw_input.css -o ./docs/css/tw.css
 ```
+
+minify
+```
+npx @tailwindcss/cli -i tw_input.css -o ./docs/css/tw.css --minify
+```
